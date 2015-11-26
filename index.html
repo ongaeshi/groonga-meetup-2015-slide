@@ -115,12 +115,14 @@
 
                   ---
                   ## groonga/rroongaコンテナ
-                  
+
                   https://hub.docker.com/r/groonga/rroonga/
 
-                  Dockerfile
-                  ```
-                  FROM ruby:2.2.2 # Groonga(http://groonga.org/docs/install/debian.html)
+                  Dockerfile(Groonga公式です)
+                  ```docker
+                  FROM ruby:2.2.2
+                  
+                  # Groonga(http://groonga.org/docs/install/debian.html)
                   RUN echo "deb http://packages.groonga.org/debian/ jessie main" >> /etc/apt/sources.list.d/groonga.list \
                     && echo "deb-src http://packages.groonga.org/debian/ jessie main" >> /etc/apt/sources.list.d/groonga.list \
                     && apt-get update \
@@ -135,8 +137,10 @@
                   ---
                   # Honyomiコンテナ
 
+                  https://hub.docker.com/r/ongaeshi/honyomi/
+
                   Dockerfile
-                  ```
+                  ```docker
                   FROM groonga/rroonga:latest 
                   
                   # Poppler
